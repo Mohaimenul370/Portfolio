@@ -22,41 +22,53 @@
         font-family: "Poppins", sans-serif;
       }
 
-      nav{
+      nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 90px;
-        background-color: rgb(27, 27, 111);
+        height: 80px;
+        background-color: rgb(15, 15, 98);
       }
-      nav ul{
+      nav ul {
         display: flex;
         justify-content: center;
       }
-      nav ul li{
+      nav ul li {
         list-style: none;
         margin: 0 23px;
       }
-      .left{
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(61, 61, 141);
+        font-size: 1.03rem;
+      }
+      .left {
         font-size: 1.5rem;
       }
-      .firstSection{
+      .firstSection {
         display: flex;
         justify-content: space-around;
-        margin: 23px 0;
+        align-items: center;
+        margin: 80px 0;
       }
-      .firstSection >div{
+      .firstSection > div {
         width: 30%;
       }
-      .leftSection{
-        
-        font-size: 3rem;
+      .leftSection {
+        font-size: 2.5rem;
       }
-     .rightSection img{
+      .rightSection img {
         width: 80%;
-        margin: 20px 0;
-     }
-     
+      }
+      .purple {
+        color: rgb(147, 90, 200);
+      }
+      #element {
+        color: rgb(147, 90, 200);
+      }
     </style>
   </head>
   <header>
@@ -64,28 +76,36 @@
       <div class="left">Mahdi's Portfolio</div>
       <div class="right">
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Service</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Contact Me</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <body>
     <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, My name is Mahdi
-                <div>I am a Web Developer</div>
-            </div>
-            <div class="rightSection">
-                <img src="bg.png" alt="">
-            </div>
-        </section>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <sapn class="purple">Mahdi</sapn>
+          <div>I am a Passionate</div>
+          <!-- <div>Web Developer</div> -->
+          <span id="element"></span>
+        </div>
+        <div class="rightSection">
+          <img src="bg.png" alt="" />
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Designer", "Digital Marketer", "Web Developer"],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
- 
-  
 </html>
